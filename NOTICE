@@ -1,0 +1,33 @@
+ARC-AGI-3 Agent and Reproducible Benchmark Harness
+Copyright 2026 Lokesh Jasrotia
+
+Licensed under the Apache License, Version 2.0 (see LICENSE).
+
+What is ours and what is not
+----------------------------
+This repository contains only code and documents written by the authors: the benchmark harness
+(arcbench/), the baseline agents (baselines/), the solved-level pin patch (patches/), the tests and
+the documentation. It contains NO copy of any third-party solution, and NO competition data
+(no game files, frames or recordings), because the competition rules forbid redistributing
+Competition Data.
+
+Third-party work this project builds on (none of it is included here)
+---------------------------------------------------------------------
+* Daniel Franzen's ARC-AGI-3 Milestone 2 solution, Apache-2.0
+  (https://www.kaggle.com/code/dfranzen/arc-agi-3-milestone-2-solution and
+  https://github.com/da-fr/arc-agi-3-solution). It is built on Tufa Labs' Duck harness
+  (Jeroen Cottaar and Tufa Labs, Apache-2.0). Our patches in patches/ are designed to be added to a
+  copy of that notebook; they do not contain its code. Any notebook published with our patch
+  carries their license and notices and marks our additions.
+* The solved-level pin idea comes from the "solved-level memory" experiment in the Milestone 2
+  write-up by sirikilohit / LohitSiriki
+  (https://github.com/LohitSiriki/arc-agi-3-milestone2-solution). patches/solved_level_pin.py is an
+  independent implementation written for the Franzen harness; no code was copied.
+* ARC Prize Foundation: the competition, the ARC-AGI-3-Agents framework (MIT, Copyright (c) 2025
+  ARC Prize; cloned locally into vendor/, not committed) and the official starter kit
+  (https://github.com/arcprize/ARC-AGI-3-Kaggle-Starter; it carries no license file, so none of
+  its code is reproduced here - get it from its own repository if you want it).
+* Qwen models, SGLang and the serving/quantisation work credited in Franzen's README are used by
+  the notebook at run time and are not redistributed here.
+
+Mentioning a project here does not imply that its authors endorse this work.

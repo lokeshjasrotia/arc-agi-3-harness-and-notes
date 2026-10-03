@@ -1,0 +1,7 @@
+# Runtime (pinned lower bounds; see docs/02-setup-windows.md). Python must be 3.12.
+arc-agi>=0.9.6
+kaggle>=2.2
+python-dotenv
+pandas
+pyarrow
+numpy

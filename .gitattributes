@@ -1,0 +1,6 @@
+# Normalise line endings so Windows (CRLF) checkouts do not show every file as modified.
+* text=auto eol=lf
+*.ps1 text eol=crlf
+*.bat text eol=crlf
+*.png binary
+*.parquet binary

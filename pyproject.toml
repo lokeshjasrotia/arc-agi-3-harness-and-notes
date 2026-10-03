@@ -1,0 +1,31 @@
+[project]
+name = "arc-agi-3-agent"
+version = "0.1.0"
+description = "Reproducible agent + benchmark harness for the ARC Prize 2026 ARC-AGI-3 competition"
+readme = "README.md"
+license = { text = "Apache-2.0" }
+requires-python = ">=3.12"
+authors = [{ name = "Lokesh Jasrotia" }]
+# Runtime deps (arc-agi, kaggle, numpy ...) are pinned in requirements.txt because
+# Kaggle installs them offline from a wheel bundle, not from PyPI.
+dependencies = []
+
+[tool.pytest.ini_options]
+testpaths = ["tests", "patches"]
+addopts = "-q"
+
+[tool.ruff]
+line-length = 115
+target-version = "py312"
+extend-exclude = ["vendor", ".venv", "environment_files", "recordings"]
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "B", "UP"]
+
+[tool.ruff.lint.per-file-ignores]
+# Kaggle notebook cell: uses globals that exist only inside the notebook (BUNDLE_DIR, os, Path)
+# and embeds the module source verbatim, so it is not reformatted.
+"patches/notebook_cell.py" = ["F821", "E402", "I001", "E501"]
+# Kept byte-identical to the source embedded in notebook_cell.py.
+"patches/solved_level_pin.py" = ["E501", "UP031"]
+"patches/test_solved_level_pin.py" = ["E501", "UP031"]

@@ -1,0 +1,17 @@
+cff-version: 1.2.0
+message: "If you use this benchmark harness or agent, please cite it as below."
+title: "ARC-AGI-3 Agent and Reproducible Benchmark Harness"
+type: software
+version: 0.1.0
+license: Apache-2.0
+authors:
+  - family-names: Jasrotia
+    given-names: Lokesh
+    # affiliation: "<fill in>"
+repository-code: "https://github.com/lokeshjasrotia/arc-agi-3-agent"
+keywords:
+  - ARC-AGI-3
+  - abstraction and reasoning
+  - interactive environments
+  - program synthesis
+  - reproducible benchmarking
